@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Encrypt & Decrypt - Cyber Tool Kit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">File Encrypt & Decrypt</div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="https://github.com/Kompelli-Anurudh/cyber-tool-kit" target="_blank">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tool-section">
+            <h2>File Encryption Tool</h2>
+            <div class="tool-container">
+                <div class="input-section">
+                    <div class="file-input">
+                        <h3>Select File</h3>
+                        <input type="file" id="file-input">
+                        <label for="file-input" class="file-label">Choose File</label>
+                        <p id="selected-path">No file selected</p>
+                    </div>
+
+                    <div class="password-section">
+                        <h3>Enter Password</h3>
+                        <div class="password-input">
+                            <input type="password" id="encryption-password" placeholder="Enter password">
+                            <button id="toggle-password" type="button">Show</button>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="encrypt-btn" class="primary-btn">Encrypt</button>
+                        <button id="decrypt-btn" class="secondary-btn">Decrypt</button>
+                    </div>
+                </div>
+
+                <div class="status-section">
+                    <h3>Status</h3>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div id="progress-indicator"></div>
+                        </div>
+                        <p id="status-text">Ready</p>
+                    </div>
+                </div>
+
+                <div class="log-container">
+                    <h3>Operation Log</h3>
+                    <div id="log-area"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cyber Tool Kit. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
