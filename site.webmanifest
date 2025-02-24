@@ -1,6 +1,6 @@
 {
     "name": "CyberSec Suite",
-    "short_name": "CyberSec",
+    "short_name": "CyberSec Suite",
     "description": "A comprehensive collection of web-based cybersecurity tools",
     "start_url": "/CyberSec-Suite/",
     "display": "standalone",
