@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Encrypt & Decrypt - CyberSec Suite</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../shared-tool-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="nav-brand">CyberSec Suite</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="https://github.com/Kompelli-Anurudh/CyberSec-Suite" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tool-container">
+            <h2>File Encryption & Decryption</h2>
+            
+            <div class="encryption-section">
+                <h3>Encryption</h3>
+                <div class="input-group">
+                    <input type="file" id="encrypt-file" class="file-input">
+                    <label for="encrypt-file" class="file-label">Choose File to Encrypt</label>
+                    <div class="password-validation" id="encrypt-validation"></div>
+                    <div class="password-container">
+                        <input type="password" id="encrypt-password" placeholder="Enter encryption password">
+                        <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+                            <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                    <button id="encrypt-btn" class="primary-btn">Encrypt File</button>
+                </div>
+            </div>
+
+            <div class="decryption-section">
+                <h3>Decryption</h3>
+                <div class="input-group">
+                    <input type="file" id="decrypt-file" class="file-input">
+                    <label for="decrypt-file" class="file-label">Choose File to Decrypt</label>
+                    <div class="password-validation" id="decrypt-validation"></div>
+                    <div class="password-container">
+                        <input type="password" id="decrypt-password" placeholder="Enter decryption password">
+                        <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+                            <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                    <button id="decrypt-btn" class="primary-btn">Decrypt File</button>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <h3>Progress</h3>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progress-indicator"></div>
+                    </div>
+                    <p id="status-text">Ready</p>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>Security Information</h3>
+                <ul>
+                    <li>Files are encrypted using AES-256-GCM encryption</li>
+                    <li>All encryption/decryption is performed locally in your browser</li>
+                    <li>Files are never uploaded to any server</li>
+                    <li>Uses secure key derivation (PBKDF2) for passwords</li>
+                    <li>Includes integrity verification to detect tampering</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CyberSec Suite. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

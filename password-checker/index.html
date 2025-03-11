@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Tools - CyberSec Suite</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../shared-tool-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="nav-brand">CyberSec Suite</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="https://github.com/Kompelli-Anurudh/CyberSec-Suite" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tools-wrapper">
+            <div class="main-container">
+                <!-- Password Checker Section -->
+                <div class="tool-container">
+                    <h2>Password Checker</h2>
+                    <div class="input-group">
+                        <label for="password">Enter Password:</label>
+                        <div class="password-container">
+                            <input type="password" id="password" placeholder="Enter a password to check">
+                            <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+                                <svg class="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <button id="checkBtn">Check Password</button>
+                    
+                    <div class="results-container" id="results">
+                        <h3>Password Strength Results</h3>
+                        <div id="strengthMeter"></div>
+                        <div id="strengthText"></div>
+                        <ul id="criteriaList"></ul>
+                    </div>
+                </div>
+
+                <!-- Password Generator Section -->
+                <div class="generator-section">
+                    <h2>Password Generator</h2>
+                    <div class="generator-options">
+                        <div class="option-group">
+                            <label>
+                                <input type="checkbox" id="uppercase-check" checked>
+                                Include Uppercase Letters
+                            </label>
+                            <label>
+                                <input type="checkbox" id="lowercase-check" checked>
+                                Include Lowercase Letters
+                            </label>
+                            <label>
+                                <input type="checkbox" id="numbers-check" checked>
+                                Include Numbers
+                            </label>
+                            <label>
+                                <input type="checkbox" id="symbols-check" checked>
+                                Include Special Characters
+                            </label>
+                        </div>
+                        
+                        <div class="length-selector">
+                            <label for="length-range">Password Length: <span id="length-value">16</span></label>
+                            <input type="range" id="length-range" min="8" max="32" value="16">
+                        </div>
+                    </div>
+
+                    <div class="generated-password">
+                        <input type="text" id="generated-password" readonly placeholder="Generated password will appear here">
+                        <div class="button-group">
+                            <button id="generateBtn" class="primary-btn">Generate Password</button>
+                            <button id="copyBtn" class="secondary-btn">Copy to Clipboard</button>
+                        </div>
+                    </div>
+                </div>
+            
+
+                <!-- Info Section -->
+                <div class="info-section">
+                    <h3>Security Information</h3>
+                    <ul>
+                        <li>All password checking is performed locally in your browser</li>
+                        <li>Passwords are never sent to any server</li>
+                        <li>Generated passwords use cryptographically secure random number generation</li>
+                        <li>Password strength is evaluated against NIST guidelines</li>
+                        <li>Supports special characters and Unicode passwords</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CyberSec Suite. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

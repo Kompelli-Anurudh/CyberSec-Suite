@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Generator - CyberSec Suite</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../shared-tool-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="nav-brand">CyberSec Suite</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="https://github.com/Kompelli-Anurudh/CyberSec-Suite" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tool-container">
+            <h2>Hash Generator</h2>
+            <p class="tool-description">Generate secure hash values using various algorithms</p>
+
+            <div class="input-section">
+                <div class="input-type-selector">
+                    <button class="input-type-btn active" data-type="text">Text Input</button>
+                    <button class="input-type-btn" data-type="file">File Input</button>
+                </div>
+
+                <div class="input-container" id="text-input-container">
+                    <textarea id="text-input" placeholder="Enter text to hash..."></textarea>
+                </div>
+
+                <div class="input-container hidden" id="file-input-container">
+                    <input type="file" id="file-input">
+                    <p class="file-info">Maximum file size: 100MB</p>
+                </div>
+
+                <div class="hash-options">
+                    <h3>Select Hash Algorithms</h3>
+                    <div class="algorithm-grid">
+                        <label class="algorithm-checkbox">
+                            <input type="checkbox" value="md5" checked>
+                            <span>MD5</span>
+                        </label>
+                        <label class="algorithm-checkbox">
+                            <input type="checkbox" value="sha1" checked>
+                            <span>SHA-1</span>
+                        </label>
+                        <label class="algorithm-checkbox">
+                            <input type="checkbox" value="sha256" checked>
+                            <span>SHA-256</span>
+                        </label>
+                        <label class="algorithm-checkbox">
+                            <input type="checkbox" value="sha512">
+                            <span>SHA-512</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button id="generate-btn" class="primary-btn">Generate Hash</button>
+            </div>
+
+            <div class="results-section hidden">
+                <h3>Generated Hashes</h3>
+                <div id="hash-results"></div>
+            </div>
+
+            <div class="security-info js-warning">
+                <h3>Security Information</h3>
+                <p>Hash functions are fundamental to modern cybersecurity, providing:</p>
+                <ul>
+                    <li><strong>Data Integrity:</strong> Verify that files or messages haven't been tampered with</li>
+                    <li><strong>Password Storage:</strong> Securely store passwords by converting them into hash values</li>
+                    <li><strong>Digital Signatures:</strong> Create unique fingerprints for digital documents</li>
+                    <li><strong>File Verification:</strong> Confirm the authenticity of downloaded files</li>
+                </ul>
+                <p><strong>Important:</strong> While hash functions are one-way functions (cannot be reversed), some older algorithms like MD5 and SHA-1 are considered cryptographically broken. For security-critical applications, use SHA-256 or stronger algorithms.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CyberSec Suite. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

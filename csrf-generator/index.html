@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF Generator - CyberSec Suite</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../shared-tool-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="nav-brand">CyberSec Suite</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="https://github.com/Kompelli-Anurudh/CyberSec-Suite" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tool-container">
+            <h2>CSRF POC Generator</h2>
+            <p class="tool-description">Generate CSRF proof-of-concept forms from HTTP requests</p>
+
+            <div class="panels-container">
+                <!-- Left Panel - HTTP Request Input -->
+                <div class="panel request-panel">
+                    <h3>HTTP Request</h3>
+                    <textarea id="http-request" placeholder="Paste your HTTP request here..."></textarea>
+                </div>
+
+                <!-- Right Panel - Generated POC Form -->
+                <div class="panel poc-panel">
+                    <h3>CSRF POC Form</h3>
+                    <div id="poc-form-container">
+                        <div class="placeholder-text">Generated POC form will appear here</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="generate-poc" class="primary-btn">Generate POC</button>
+                <button id="copy-poc" class="secondary-btn" disabled>Copy POC</button>
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-section">
+                <h3>Security Information</h3>
+                <ul>
+                    <li>All processing is done locally in your browser</li>
+                    <li>No data is sent to external servers</li>
+                    <li>Use responsibly and only on systems you have permission to test</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CyberSec Suite. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

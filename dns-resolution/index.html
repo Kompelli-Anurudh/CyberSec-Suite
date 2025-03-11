@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Resolution - CyberSec Suite</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../shared-tool-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="nav-brand">CyberSec Suite</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="https://github.com/Kompelli-Anurudh/CyberSec-Suite" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tool-container">
+            <h2>DNS Resolution Tool</h2>
+            <div class="input-section">
+                <h3>Domain Lookup</h3>
+                <div class="input-group">
+                    <input type="text" id="domain-input" placeholder="Enter domain name (e.g., example.com)">
+                    <button id="resolve-btn" class="primary-btn">Resolve DNS</button>
+                </div>
+                <div class="record-types">
+                    <label>
+                        <input type="checkbox" value="A" checked> A (IPv4)
+                    </label>
+                    <label>
+                        <input type="checkbox" value="AAAA"> AAAA (IPv6)
+                    </label>
+                    <label>
+                        <input type="checkbox" value="MX"> MX (Mail)
+                    </label>
+                    <label>
+                        <input type="checkbox" value="TXT"> TXT
+                    </label>
+                    <label>
+                        <input type="checkbox" value="NS"> NS (Nameserver)
+                    </label>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <h3>Resolution Results</h3>
+                <div class="results-container">
+                    <div class="results-header">
+                        <span class="col-type">Record Type</span>
+                        <span class="col-value">Value</span>
+                        <span class="col-ttl">TTL</span>
+                    </div>
+                    <div id="dns-results" class="results-body">
+                        <!-- Results will be populated here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="export-container">
+                <button id="export-json" class="secondary-btn" disabled>Export Results (JSON)</button>
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-section">
+                <h3>Security Information</h3>
+                <ul>
+                    <li>Uses secure DNS over HTTPS (DoH) for all queries</li>
+                    <li>Supports multiple DNS record types (A, AAAA, MX, TXT, NS)</li>
+                    <li>All queries are encrypted in transit</li>
+                    <li>No DNS query history is stored</li>
+                    <li>Results are processed locally in your browser</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CyberSec Suite. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

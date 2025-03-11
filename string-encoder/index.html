@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Encoder & Decoder - CyberSec Suite</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../shared-tool-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="nav-brand">CyberSec Suite</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="https://github.com/Kompelli-Anurudh/CyberSec-Suite" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tool-container">
+            <h2>String Encoder & Decoder</h2>
+            <div class="input-section">
+                <textarea id="input-text" placeholder="Enter text to encode/decode" rows="4"></textarea>
+            </div>
+
+            <div class="output-sections">
+                <div class="encode-section">
+                    <h3>Encoded Formats</h3>
+                    <div class="grid-container" id="encode-grid"></div>
+                </div>
+
+                <div class="decode-section">
+                    <h3>Decoded Formats</h3>
+                    <div class="grid-container" id="decode-grid"></div>
+                </div>
+            </div>
+            <div class="info-section">
+                <h3>Security Information</h3>
+                <ul>
+                    <li>Encoding is not encryption - it does not provide any security or confidentiality.</li>
+                    <li>Base64 and other encodings are easily reversible and should not be used to protect sensitive data.</li>
+                    <li>URL encoding should be used for safe data transmission in URLs, not for security purposes.</li>
+                    <li>HTML encoding helps prevent XSS attacks but should be used alongside other security measures.</li>
+                    <li>Always use proper encryption methods (like AES or RSA) for securing sensitive information.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+/* Tool-specific styles */
+
+.tool-description {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #495057;
+}
+
+.secondary-btn{
+    background-color: #000000;
+    color: white;
+}
+
+.secondary-btn:hover{
+    background-color: #000000;
+}
+
+.primary-btn{
+    background-color: #000000;
+    color: white;
+}
+
+.primary-btn:hover{
+    background-color: #000000;
+}
+
+.panels-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.left-panel,
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.section-container {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1.5rem;
+}
+
+.section-container h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.image-preview-container {
+    margin-top: 1rem;
+    border: 2px dashed #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#image-preview {
+    max-width: 100%;
+    max-height: 300px;
+    display: none;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #000000;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-label:hover {
+    background-color: #000000;
+}
+
+#selected-image {
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+#message-input,
+#output-text {
+    width: 100%;
+    min-height: 120px;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+#output-text {
+    background-color: #f8f8f8;
+}
+
+/* Password Input Styling */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input[type="password"] {
+    width: 100%;
+    padding: 0.75rem 40px 0.75rem 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.password-toggle svg {
+    width: 100%;
+    height: 100%;
+    stroke: #666;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.progress-section {
+    margin-bottom: 1.5rem;
+}
+
+.info-section {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.info-section h3 {
+    color: #856404;
+    margin-bottom: 1rem;
+}
+
+.info-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.info-section li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #856404;
+}
+
+.info-section li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #856404;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .panels-container {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons button {
+        width: 100%;
+    }
+
+    .image-preview-container {
+        min-height: 150px;
+    }
+
+    #image-preview {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-container {
+        padding: 1rem;
+    }
+
+    .image-preview-container {
+        min-height: 100px;
+    }
+
+    #image-preview {
+        max-height: 150px;
+    }
+
+    #message-input,
+    #output-text {
+        min-height: 100px;
+    }
+
+    .info-section {
+        padding: 1rem;
+    }
+
+    .info-section li {
+        font-size: 0.9rem;
+    }
+} 

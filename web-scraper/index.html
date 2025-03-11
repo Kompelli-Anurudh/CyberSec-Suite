@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper - CyberSec Suite</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="stylesheet" href="../shared-tool-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .js-warning {
+            text-align: center;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 600px;
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            border-radius: 4px;
+            color: #856404;
+        }
+        .js-warning h3 {
+            margin-bottom: 1rem;
+            color: #856404;
+        }
+        .js-warning p {
+            margin-bottom: 1rem;
+        }
+        .js-warning ul {
+            text-align: left;
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="nav-brand">CyberSec Suite</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="https://github.com/Kompelli-Anurudh/CyberSec-Suite" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <noscript>
+        <div class="js-warning">
+            <h3>JavaScript Required</h3>
+            <p>This web scraper requires JavaScript to function. Please enable JavaScript in your browser settings to use this tool.</p>
+            <ul>
+                <li>The web scraper needs JavaScript to make HTTP requests</li>
+                <li>JavaScript is required to parse and display scraped content</li>
+                <li>All data processing is done securely in your browser</li>
+            </ul>
+            <p>After enabling JavaScript, please refresh the page.</p>
+        </div>
+    </noscript>
+
+    <main>
+        <div class="tool-container">
+            <h2>Website Scraper</h2>
+            <div class="input-group">
+                <input type="url" id="website-url" placeholder="Enter website URL (e.g., https://example.com)">
+                <button id="start-scraping" class="primary-btn">Start Scraping</button>
+                <button id="stop-scraping" class="secondary-btn" disabled>Stop</button>
+            </div>
+
+            <div class="status-container">
+                <p id="status-text">Ready</p>
+                <div class="progress-bar">
+                    <div id="progress-indicator"></div>
+                </div>
+            </div>
+
+            <div class="results-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="text">Text Content</button>
+                    <button class="tab-btn" data-tab="links">Links</button>
+                    <button class="tab-btn" data-tab="images">Images</button>
+                    <button class="tab-btn" data-tab="forms">Forms</button>
+                    <button class="tab-btn" data-tab="tables">Tables</button>
+                    <button class="tab-btn" data-tab="emails">Emails</button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="text" class="tab-pane active">
+                        <div class="content-area"></div>
+                    </div>
+                    <div id="links" class="tab-pane">
+                        <div class="content-area"></div>
+                    </div>
+                    <div id="images" class="tab-pane">
+                        <div class="content-area image-grid"></div>
+                    </div>
+                    <div id="forms" class="tab-pane">
+                        <div class="content-area"></div>
+                    </div>
+                    <div id="tables" class="tab-pane">
+                        <div class="content-area"></div>
+                    </div>
+                    <div id="emails" class="tab-pane">
+                        <div class="content-area"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="log-container">
+                <h3>Log</h3>
+                <div id="log-area"></div>
+            </div>
+
+            <div class="export-container">
+                <button id="export-json" class="secondary-btn" disabled>Export as JSON</button>
+                <button id="export-txt" class="secondary-btn" disabled>Export as TXT</button>
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-section">
+                <h3>Security Information</h3>
+                <ul>
+                    <li>All web scraping is performed through secure HTTPS connections</li>
+                    <li>Respects robots.txt and site crawling policies</li>
+                    <li>Data is processed locally in your browser</li>
+                    <li>No data is stored on external servers</li>
+                    <li>Supports rate limiting to prevent server overload</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CyberSec Suite. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

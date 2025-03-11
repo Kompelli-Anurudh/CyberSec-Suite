@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    flex: 1;
+}
+
+.tool-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+h3 {
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.tool-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.mode-selector {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.mode-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #1a1a1a;
+    border-radius: 4px;
+    background: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.mode-btn.active {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #000000;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.file-label:hover {
+    background-color: #000000;
+}
+
+#selected-path {
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+.password-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.password-input {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+    width: 100%;
+    height: 44px;
+    padding: 8px 40px 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password-toggle svg {
+    width: 20px;
+    height: 20px;
+    color: #666;
+}
+
+input[type="password"].invalid {
+    border-color: #ff4444;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+#toggle-password {
+    background-color: #666;
+    color: #fff;
+}
+
+#toggle-password:hover {
+    background-color: #555;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.primary-btn {
+    background-color: #000000;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.primary-btn:hover {
+    background-color: #000000;
+}
+
+.primary-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.secondary-btn {
+    background-color: #000000;
+    color: #fff;
+    flex: 1;
+}
+
+.secondary-btn:hover {
+    background-color: #000000;
+}
+
+.status-section {
+    margin-top: 1rem;
+}
+
+.progress-container {
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    height: 4px;
+    background-color: #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+#progress-indicator {
+    height: 100%;
+    width: 0;
+    background-color: #4CAF50;
+    transition: width 0.3s;
+}
+
+#status-text {
+    color: #666;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.log-container {
+    margin-top: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    background-color: #f8f8f8;
+}
+
+#log-area {
+    height: 200px;
+    overflow-y: auto;
+    font-family: monospace;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    white-space: pre-wrap;
+}
+
+.output-section {
+    margin-top: 1rem;
+}
+
+.output-path {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#output-path {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background-color: #f8f8f8;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+/* Tool-specific styles */
+.encryption-section,
+.decryption-section {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.password-validation {
+    color: #ff4444;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    min-height: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .encryption-section,
+    .decryption-section {
+        padding: 1rem;
+    }
+
+    .input-group {
+        gap: 0.8rem;
+    }
+
+    .file-label {
+        text-align: center;
+    }
+
+    .password-container input[type="password"],
+    .password-container input[type="text"] {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-section {
+        padding: 1rem;
+    }
+
+    .info-section li {
+        font-size: 0.9rem;
+    }
+
+    .password-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .password-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .action-buttons,
+    .password-input,
+    .output-path {
+        flex-direction: column;
+    }
+    
+    .tool-section {
+        padding: 1.5rem;
+    }
+    
+    .nav-links a {
+        margin-left: 1rem;
+    }
+    
+    .mode-selector {
+        flex-direction: column;
+    }
+} 
