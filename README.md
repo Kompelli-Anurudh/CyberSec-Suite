@@ -5,7 +5,7 @@ A comprehensive collection of web-based cybersecurity tools built with modern we
 
 ## Live Demo
 
-🔗 [Live Demo][(https://cyber-sec-suite.netlify.app/)]
+🔗 [Live Demo](https://cyber-sec-suite.netlify.app/)
 
 
 ## Features
